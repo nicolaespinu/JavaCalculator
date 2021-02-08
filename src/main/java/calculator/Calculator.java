@@ -9,6 +9,10 @@ public class Calculator {
     static List<String> itemsList;
 
     public static double evaluateText(String expression) {
+
+        if (expression.length() == 0) {
+            return 0.0;
+        }
         if (!expression.contains("(")) {
             return getResult(expression);
         } else {
